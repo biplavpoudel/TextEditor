@@ -22,8 +22,8 @@ public class DocsController : Controller
         _context = context;
     }
 
-    // GET: Docs
-    public async Task<IActionResult> Index()
+// GET: Docs
+public async Task<IActionResult> Index()
     {
         var applicationDbContext = _context.Docs.Include(d => d.User);
         return View(await applicationDbContext.ToListAsync());

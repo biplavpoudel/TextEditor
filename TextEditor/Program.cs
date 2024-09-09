@@ -14,6 +14,9 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
+var apiKey = builder.Configuration.GetSection("TinyCloud:ApiKey").Value;
+Console.WriteLine($"API Key: {apiKey}");
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
