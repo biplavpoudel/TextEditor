@@ -16,7 +16,6 @@ namespace TextEditor.Controllers;
 public class DocsController : Controller
 {
     private readonly ApplicationDbContext _context;
-
     public DocsController(ApplicationDbContext context)
     {
         _context = context;
